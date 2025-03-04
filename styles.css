@@ -241,16 +241,7 @@ conteudo-esquerdo h3 {
 }
 
 /* Cards Portfólio */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    gap: 48px;
-    box-sizing: border-box;
-}
-
-.card {
+#portfolio .portfolio-cards .card {
     flex-basis: calc(50% - 24px);
     flex-grow: 1;
     flex-shrink: 1;
@@ -260,18 +251,18 @@ conteudo-esquerdo h3 {
     box-sizing: border-box;
 }
 
-.card img {
+#portfolio .portfolio-cards .card img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
-.card h3 {
+#portfolio .portfolio-cards .card h3 {
     margin-bottom: 5px;
     color: black;
 }
 
-.card a {
+#portfolio .portfolio-cards .card a {
     display: inline-block;
     padding: 8px 16px;
     background-color: #007bff;
@@ -286,68 +277,100 @@ conteudo-esquerdo h3 {
     justify-content: center;
     margin-top: 20px;
 }
-/* Centralizando a seção de carreira */
+
+/* Centralizando a seção "Minha Carreira" */
 #carreira {
-    text-align: center; /* Centraliza os textos dentro da seção */
-    padding: 20px;
-  }
-  
-  /* Centralizando o título Carreira */
-  #carreira .tag-section {
-    font-size: 24px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.carreira-centralizado {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tag-section {
+    font-size: 18px;
+    color: #5a5a5a;
+    text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  /* Centralizando o título Minha Trajetória */
-  #carreira h1 {
+    margin-bottom: 20px;
+}
+
+h1 {
     font-size: 36px;
     font-weight: bold;
     margin-top: 0;
-    margin-bottom: 20px;
-  }
-  
-  /* Centralizando o conteúdo das colunas e mantendo elas lado a lado */
-  .career-centralizado {
+}
+
+/* Estilo para as colunas */
+.columns {
     display: flex;
-    justify-content: center; /* Alinha as colunas no centro */
-    gap: 20px; /* Espaçamento entre as colunas */
-  }
-  
-  /* As colunas ficam lado a lado */
-  .columns {
-    display: flex;
-    flex-direction: row; /* Colunas ao lado uma da outra */
-    gap: 20px; /* Espaçamento entre as colunas */
-  }
-  
-  /* Estilo das colunas dentro de .columns */
-  .column {
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Estilo de cada coluna */
+.column {
     width: 45%; /* Controla a largura das colunas */
-  }
-  
-  /* Ajustando os cards para ficarem empilhados verticalmente */
-  .cards {
+    text-align: left;
+}
+
+/* Estilo dos títulos das colunas */
+.column h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.column h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Cards dentro das colunas */
+.cards {
     display: flex;
-    flex-direction: column; /* Faz os cards ficarem empilhados */
+    flex-direction: column; /* Organiza os cards em formato de coluna */
     gap: 20px; /* Espaçamento entre os cards */
-  }
-  
-/* Card individual */
+}
+
+/* Estilo dos cards */
 .card {
-    width: 400px;  /* Definindo a largura dos cards como 400px */
-    height: 150px; /* Definindo a altura dos cards como 150px */
-    padding: 15px; /* Ajustando o padding dentro do card */
+    width: 100%;  /* O card vai ocupar toda a largura da coluna */
+    padding: 20px;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espaço entre os cards */
-  }
-  
+}
 
-  .dates {
+.card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.dates {
     font-size: 14px;
     color: gray;
-    margin-top: 10px;
-  }
-  
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 80%; /* As colunas vão ocupar mais espaço na tela */
+    }
+}
