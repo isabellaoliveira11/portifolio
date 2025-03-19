@@ -1,6 +1,6 @@
 // Filtro dos Projetos
 const filterButtons = document.querySelectorAll(".filter-button");
-const cards = document.querySelectorAll(".card");
+const portfolioCards = document.querySelectorAll("#portfolio .card"); // Mudança aqui
 
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
@@ -13,25 +13,12 @@ filterButtons.forEach(button => {
     button.classList.add("active");
 
     // Filtra os cards
-    cards.forEach(card => {
+    portfolioCards.forEach(card => { // Mudança aqui
       if (card.dataset.category === category || category === "all") {
         card.style.display = "block";
       } else {
         card.style.display = "none";
       }
     });
-  });
-});
-
-// Efeito Hover nos Cards de Carreira
-const carreiraCards = document.querySelectorAll("#carreira .card");
-
-carreiraCards.forEach(card => {
-  card.addEventListener("mouseover", () => {
-    card.style.border = "2px solid #4ae290";
-  });
-
-  card.addEventListener("mouseout", () => {
-    card.style.border = "1px solid rgba(123, 74, 226, 0.5)";
   });
 });

@@ -1,5 +1,7 @@
 
 /* Estilos Globais */
+
+
 body {
     overflow-x: hidden;
     box-sizing: border-box;
@@ -319,33 +321,42 @@ nav a:hover {
     justify-content: center;
     margin-top: 20px;
 }
-
-/* Centralizando a seção "Minha Carreira" */
+/* Estilos Globais */
+:root {
+    --primary-color: #5a5a5a;
+    --secondary-color: #666;
+    --background-color: #f9f9f9;
+    --border-color: #ddd;
+    --title-font-size: 36px;
+    --subtitle-font-size: 24px;
+    --text-font-size: 16px;
+    --small-text-font-size: 14px;
+}
 #carreira {
     text-align: center;
     padding: 40px 0;
 }
 
-.carreira-centralizado {
+.container {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .tag-section {
     font-size: 18px;
-    color: #5a5a5a;
+    color: var(--primary-color);
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: var(--title-font-size);
     font-weight: bold;
     margin-top: 0;
 }
 
-/* Estilo para as colunas */
 .columns {
     display: flex;
     justify-content: space-between;
@@ -353,15 +364,14 @@ h1 {
     margin-top: 40px;
 }
 
-/* Estilo de cada coluna */
 .column {
-    width: 45%; /* Controla a largura das colunas */
+    width: 45%;
     text-align: left;
+    max-width: 550px;
 }
 
-/* Estilo dos títulos das colunas */
 .column h2 {
-    font-size: 24px;
+    font-size: var(--subtitle-font-size);
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -372,40 +382,96 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Cards dentro das colunas */
 .cards {
     display: flex;
-    flex-direction: column; /* Organiza os cards em formato de coluna */
-    gap: 20px; /* Espaçamento entre os cards */
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Estilo dos cards */
-.card {
-    width: 100%;  /* O card vai ocupar toda a largura da coluna */
+#carreira .cards .card {
+    width: 580px;
+    height: 220px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #090E16;
+    border: 1px solid #7B4AE2;
+    border-radius: 16px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+#carreira .cards .card:hover {
+    background-color: rgba(123, 74, 226, 0.1);
+    border: none;
+}
+#carreira .cards .card[data-status="atual"] h4,
+#carreira .cards .card[data-status="atual"] time {
+  color: #4ae290;
+}
+
+#carreira .cards .card[data-status="estudando"] h4,
+#carreira .cards .card[data-status="estudando"] time {
+  color: #4ae290;
+}
+
+/* Opcional: Adicionando uma bolinha verde pulsante */
+#carreira .cards .card[data-status="atual"] h4::before,
+#carreira .cards .card[data-status="estudando"] h4::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #4ae290;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .card h4 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .card p {
-    font-size: 16px;
-    color: #666;
+    font-size: var(--text-font-size);
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: 15px;
 }
 
-.dates {
-    font-size: 14px;
-    color: gray;
+.card time {
+    font-size: var(--small-text-font-size);
+    color: #7B4AE2;
+    font-weight: bold;
 }
 
+.card time span {
+    font-weight: normal;
+}
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        gap: 20px;
+    }
 
+    .column {
+        width: 100%;
+    }
+}
 /* Skills */
 #skills {
     padding: 75px 0;
