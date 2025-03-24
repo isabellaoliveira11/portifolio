@@ -380,14 +380,14 @@ nav a:hover {
 
 .tag-section {
     font-size: 18px;
-    color: var(--primary-color);
+    color: #5a5a5a;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 h1 {
-    font-size: var(--title-font-size);
+    font-size: 36px;
     font-weight: bold;
     margin-top: 0;
 }
@@ -406,7 +406,7 @@ h1 {
 }
 
 .column h2 {
-    font-size: var(--subtitle-font-size);
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -424,55 +424,94 @@ h1 {
 }
 
 #carreira .cards .card {
-    width: 580px;
-    height: 220px;
+    width: 400px;
+    height: 200px;
     padding: 20px;
-    background-color: #090E16;
-    border: 1px solid #7B4AE2;
+    background-color: #090e16;
+    border: 1px solid rgba(123, 74, 226, 0.5);
     border-radius: 16px;
-    transition: background-color 0.3s ease, border 0.3s ease;
+    transition: all 0.6s ease-in-out;
+    position: relative;
 }
 
 #carreira .cards .card:hover {
     background-color: rgba(123, 74, 226, 0.1);
-    border: none;
-}
-#carreira .cards .card[data-status="atual"] h4,
-#carreira .cards .card[data-status="atual"] time {
-  color: #4ae290;
+    border: 1px solid transparent;
 }
 
-#carreira .cards .card[data-status="estudando"] h4,
+#carreira .cards .card[data-status="atual"],
+#carreira .cards .card[data-status="estudando"] {
+    border: 2px solid #4ae290;
+    background: rgba(74, 226, 144, 0.1);
+}
+
+#carreira .cards .card h4 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+#carreira .cards .card p {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#carreira .cards .card time {
+    font-size: 14px;
+    color: #7b4ae2;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex; /* Adiciona flexbox para alinhar a bolinha */
+    align-items: center; /* Alinha a bolinha verticalmente */
+}
+
+#carreira .cards .card[data-status="atual"] time,
 #carreira .cards .card[data-status="estudando"] time {
-  color: #4ae290;
+    color: #4ae290;
 }
 
-/* Opcional: Adicionando uma bolinha verde pulsante */
-#carreira .cards .card[data-status="atual"] h4::before,
-#carreira .cards .card[data-status="estudando"] h4::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 5px;
-  border-radius: 50%;
-  background-color: #4ae290;
-  animation: pulse 1.5s infinite ease-in-out;
+.pulsing-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ae290;
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4); /* Sombra inicial menor */
+    animation: pulse 1.5s infinite linear; /* Adicionei linear para suavizar a transição */
+    margin-left: 5px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4); /* Sombra inicial */
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(204, 169, 44, 0); /* Sombra máxima */
+    }
+  }
+
+.tecnologias {
+    border-radius: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.tecnologias span {
+    background-color: #7b4ae2;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
 }
 
 .card h4 {
@@ -496,6 +535,7 @@ h1 {
 .card time span {
     font-weight: normal;
 }
+
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .columns {
