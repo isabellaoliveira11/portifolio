@@ -27,6 +27,10 @@ header {
     top: 20px;
     left: 20px;
     right: 20px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
     background-color: #1C1836;
     z-index: 100;
     border-radius: 50px;
@@ -39,15 +43,16 @@ header {
 
 nav {
     display: flex;
-    justify-content: center; /* Garante que os links fiquem no centro horizontalmente */
     align-items: center; /* Garante o alinhamento vertical no centro */
     width: 100%; /* Preenche toda a largura disponível */
+    justify-content: center; /* Alinha os itens à direita */
+    gap: 10px; /* Adicionado espaçamento entre os itens */
+
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     padding: 0;
     margin: 0;
     width: auto; /* Certifica-se de que o conteúdo não vai ocupar mais espaço do que o necessário */
@@ -59,7 +64,7 @@ nav li {
 }
 
 nav a {
-    color: #b3b3bf8b;
+    color: #878595;
     transition: color 0.3s ease;
     padding: 5px 15px; /* Reduzido o padding vertical */
     text-decoration: none;
@@ -72,33 +77,35 @@ nav a:hover {
     border-radius: 5px;
 }
 
-#secao1 {
+/*home */
+
+#home {
     max-width: 1640px;
     height: 765px;
     margin: 0 auto;
-    display: flex; /* Adicionado para centralizar o conteúdo com Flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.secao1-container {
+.home-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Largura máxima para o conteúdo */
-    padding: 0 20px; /* Adicionado para espaçamento lateral */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.container-esquerda {
+.home-left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.container-nome h1 {
+.home-name h1 {
     margin: 24px 0;
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -106,7 +113,7 @@ nav a:hover {
     line-height: 61px;
 }
 
-.container-nome h6 {
+.home-name h6 {
     margin: 0;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -114,38 +121,38 @@ nav a:hover {
     opacity: 1;
 }
 
-.social-medias {
+.home-social-media {
     display: flex;
     margin-top: 24px;
     gap: 16px;
 }
 
-.social-medias img {
+.home-social-media img {
     transition: all 0.4s ease-in-out;
     cursor: pointer;
 }
 
-.social-medias img:hover {
+.home-social-media img:hover {
     transition: all 0.4s ease-in-out;
     scale: 110%;
 }
 
-.container-centro img {
+.home-center img {
     transition: all 0.8s ease-in-out;
     height: 400px;
 }
 
-.container-centro img:hover {
+.home-center img:hover {
     transform: scale(1.05);
 }
 
-.container-direita {
+.home-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.container-direita a {
+.home-right a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -157,7 +164,7 @@ nav a:hover {
     font-size: 16px;
 }
 
-.botao-conversar {
+.home-contact-button { /* Renomeado para home-contact-button */
     background-color: #007bff;
     color: #ffffff;
     padding: 10px 20px;
@@ -170,10 +177,22 @@ nav a:hover {
 
 
 
-
-
 /* Seção About Me */
-#aboutMe {
+
+/* Variáveis CSS */
+:root {
+    --primary-color: #5a37a4;
+    --primary-color-opacity: rgba(123, 74, 226, 0.1);
+    --white: #ffffff;
+    --text-opacity: 50%;
+    --border-radius: 16px;
+    --tag-border-radius: 5px;
+    --margin-bottom: 20px;
+    --section-padding: 140px;
+}
+
+/* Seção "Sobre Mim" */
+#sobreMim {
     width: 100%;
     max-width: 1640px;
     margin-bottom: 140px;
@@ -181,54 +200,70 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-.about-me-container {
+.container-sobre-mim {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
 }
 
-.corner-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+/* Imagem de perfil */
+.imagem-perfil {
+    width: 454px;
+    height: 454px;
     object-fit: cover;
-    margin-right: 30%;
+    margin-right: 30px;
 }
 
-.description-container {
+/* Contêiner de descrição */
+.descricao-sobre-mim {
     flex-grow: 1;
+    margin-left: 30px; /* Adiciona margem esquerda para deslocar o texto para a direita */
 }
 
-.description {
-    box-sizing: border-box;
+/* Tag de seção (caixa roxa) */
+.caixa-roxa {
+    width: 160px;
+    height: 45px;
+    background-color: rgba(123, 74, 226, 0.1);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7B4AE2;
+    margin-bottom: 20px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
 }
 
-.tag-section {
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.description h1 {
+/* Título da descrição */
+.nome-perfil {
     font-family: "Raleway";
     font-weight: 800;
     font-size: 48px;
     line-height: 56px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
+    margin-bottom: 20px; /* Adiciona margem inferior para espaçamento */
 }
 
-.description p {
+/* Parágrafos da descrição */
+.introducao-perfil,
+.detalhes-perfil {
     font-family: "Raleway";
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     color: #ffffff;
     opacity: 50%;
-    margin-bottom: 8px;
+    margin-bottom: 15px; /* Adiciona margem inferior para espaçamento */
 }
 
+.detalhes-perfil {
+    list-style: none;
+    padding-left: 0;
+}
 /* Seção Portfólio */
 #portfolio {
     width: 100%;
