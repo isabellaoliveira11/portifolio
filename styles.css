@@ -164,17 +164,30 @@ nav a:hover {
     font-size: 16px;
 }
 
-.home-contact-button { /* Renomeado para home-contact-button */
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+.home-contact-button {
+    transition: all 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 16px;
+    border: 1px solid rgba(123, 74, 226, 0.5);
+    border-radius: 16px;
+    background-color: transparent;
+    color: rgba(123, 74, 226, 0.5);
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: pointer; /* Adicionado para garantir o cursor de pointer */
 }
 
-
+.home-contact-button:hover {
+    transition: all 0.2s ease-out;
+    border: 1px solid transparent;
+    background: rgba(123, 74, 226, 0.1);
+}
 
 
 /* Seção About Me */
@@ -236,6 +249,7 @@ nav a:hover {
     font-weight: 400;
     font-size: 18px;
     line-height: 40px;
+    font-weight: bold;
 }
 
 /* Título da descrição */
@@ -584,88 +598,209 @@ h1 {
 }
 
 .skill-box {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
+    border: none; /* Remove a borda */
+    padding: 0; /* Remove o padding */
+    border-radius: 0; /* Remove o border-radius */
+    transition: none; /* Remove a transição */
 }
 
 .skill-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Remove o box-shadow no hover */
 }
 
 .skill-name {
     display: none;
     margin-top: 5px;
     font-size: 0.9em;
+    color: #432C7C; /* Cor inicial do texto */
+
 }
 
 .skill-box:hover + .skill-name {
     display: block;
+    font-weight: bold;
+}
+
+.skill-icon {
+    width: 64px; /* Aumenta o tamanho dos ícones para 64px */
+    height: 64px; /* Garante que os ícones mantenham a proporção */
 }
 
 /* Contato */
-#contact {
-    padding: 80px 0;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-.contact-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-#contact h2 {
-    margin-bottom: 30px;
-}
-
-.contact-info {
+#contatos {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 140px;
 }
 
-.contact-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.container-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.cabecalho-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.cabecalho-contato h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.info-contato {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+
+.info-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-email h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #7b4ae2;
+    margin: 0;
+}
+
+.info-email p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.voltar-ao-topo {
     cursor: pointer;
-    margin-right: 20px;
-}
-
-.contact-button:hover {
-    background-color: #0056b3;
-}
-
-.email {
-    font-size: 1.1em;
-}
-
-.back-to-top {
-    display: inline-block;
-    margin-top: 20px;
-    color: #007bff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(123, 74, 226, 0.5);
     text-decoration: none;
 }
 
-.back-to-top:hover {
-    text-decoration: underline;
+.icone-email, .icone-seta-cima {
+    width: 32px;
+    height: 32px;
 }
 
+.botao-whatsapp {
+    transition: all 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 16px;
+    border: 1px solid rgba(123, 74, 226, 0.5);
+    border-radius: 16px;
+    background-color: transparent; /* Adicionado para remover o fundo verde */
+    color: rgba(123, 74, 226, 0.5); /* Adicionado para definir a cor do texto */
+    text-decoration: none; /* Adicionado para remover a decoração de link */
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+}
 
-/* Responsividade para telas menores */
+.botao-whatsapp:hover {
+    transition: all 0.2s ease-out;
+    border: 1px solid transparent;
+    background: rgba(123, 74, 226, 0.1);
+}
+
+.icone-copiar {
+    width: 25px; /* Ajuste o tamanho conforme necessário */
+    height: 25px; /* Ajuste o tamanho conforme necessário */
+    cursor: pointer; /* Muda o cursor para uma mãozinha */
+    margin-left: 10px; /* Adiciona um pequeno espaçamento */
+}
+/* Estilos responsivos */
 @media (max-width: 768px) {
-    .columns {
-        flex-direction: column;
-        align-items: center;
+    .container-contato {
+        align-items: flex-start;
+        gap: 24px;
     }
 
-    .column {
-        width: 80%; /* As colunas vão ocupar mais espaço na tela */
+    .cabecalho-contato h1 {
+        font-size: 24px;
+    }
+
+    .info-contato {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
+footer {
+    width: 100%;
+    max-width: 1640px;
+    height: auto;
+    padding: 10px 24px;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    /* background-color: #f0f0f0; Remove a cor de fundo */
+}
+
+.rodape-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(123, 74, 226, 0.1);
+}
+
+.rodape-container h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 5%;
+    padding-top: 10px;
+}
+
+.social-medias img {
+    cursor: pointer;
+}
+
+.social-medias img:hover {
+    transition: all 0.4s ease-in-out;
+    scale: 1.1;
+}
+
+/* Estilos responsivos */
+@media (max-width: 525px) {
+    .rodape-container {
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
     }
 }
