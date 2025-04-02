@@ -2,360 +2,335 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Portifolioisa</title>
+    <title>Portfólio Isabela Oliveira</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="#home">Início</a>
-            <a href="#aboutMe">Sobre Mim</a>
-            <a href="#portfolio">Projetos</a>
-            <a href="#carreira">Carreira</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contato</a>
-
+            <div class="secoes">
+                <a href="#inicio">Status <span class="ponto-pulsante"></span></a>
+                <a href="#inicio">Início</a>
+                <a href="#sobre-mim">Sobre Mim</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#carreira">Carreira</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="idioma">
+                <button id="pt" class="lingua">PT</button>
+                <button id="en" class="lingua">EN</button>
+            </div>
         </nav>
     </header>
-
-    <section id="home">
-        <div class="home-container">
-            <div class="home-left">
-                <div class="home-name">
-                    <h1>Isabela<br>Oliveira</h1>
-                    <h6>Full Stack Developer</h6>
-                </div>
-                <div class="home-social-media">
-                    <a href="https://www.linkedin.com/in/seu-perfil-linkedin/" target="_blank">
-                        <img src="assets/linkedin-white-circle.svg" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/seu-perfil-github" target="_blank">
-                        <img src="assets/github-white-circle.svg" alt="GitHub">
-                    </a>
-                </div>
-            </div>
-            <div class="home-center">
-                <img src="assets/fotoisa.jpg" alt="Foto de Isabela">
-            </div>
-            <div class="home-right">
-                <a href="curriculo.pdf" download="curriculo.pdf" target="_частное_blank">Download CV</a>
-                <button class="home-contact-button">Vamos conversar</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobreMim" class="secao-sobre-mim">
-        <div class="container-sobre-mim">
-            <img class="imagem-perfil" src="assets/fotoisa.jpg" alt="Foto de Isabela Oliveira">
-            <div class="descricao-sobre-mim">
-                <div class="tag-secao caixa-roxa">🧐Sobre Mim</div>
-                <h2 class="nome-perfil">Isabela Oliveira</h2>
-                <p class="introducao-perfil">Olá, mundo! Pode me chamar de Isa. Prazer!</p>
-                <ul class="detalhes-perfil">
-                    <li>👩‍💻 +4 anos desenvolvendo aplicações web.</li>
-                    <li>👩‍🏫 +2 anos como professora de tecnologia, ajudando novos talentos a entrarem no mundo da programação.</li>
-                    <li>🎓 Graduada em Sistemas de Informação e Cursando Licenciatura em Computação.</li>
-                    <li>💡 Interesses em desenvolvimento Full Stack, educação tecnológica e UX/UI Design.</li>
-                    <li>🚀 Buscando evoluir um pouco mais a cada dia!</li>                    
-                </ul>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="portfolio">
-        <div class="portfolio-container">
-            <div class="header">
-                <div class="header-content">
-                    <span class="section-title">Trabalhos e Projetos</span>
-                    <div class="buttons">
-                        <button class="filter-button active" data-category="all">Todos</button>
-                        <button class="filter-button" data-category="web">Web</button>
-                        <button class="filter-button" data-category="mobile">Mobile</button>
+    <main>
+        <section id="inicio" class="secao-inicio">
+            <div class="container-inicio">
+                <div class="inicio-esquerda">
+                    <div class="inicio-nome">
+                        <h1>Isabela<br>Oliveira</h1>
+                        <h6 class="inicio-subtitulo">Front-end developer · UI designer</h6>
+                    </div>
+                    <div class="inicio-midias-sociais">
+                        <a href="https://www.linkedin.com/in/seu-perfil-linkedin/" target="_blank">
+                            <img src="assets/linkedin-white-circle.svg" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/seu-perfil-github" target="_blank">
+                            <img src="assets/github-white-circle.svg" alt="GitHub">
+                        </a>
                     </div>
                 </div>
-            </div>
-
-            <div class="cards portfolio-cards">
-                <div class="card" data-category="web">
-                    Inserir imagem aqui
-                    <h3>Website para Tech Solutions</h3>
-                    <p>Desenvolvimento de website responsivo com design moderno e foco na experiência do usuário.</p>
-                    <a href="https://meuprojeto1.com" target="_blank">Ver projeto</a>
+                <div class="inicio-centro">
+                    <img class="foto-perfil-inicio" src="assets/fotoisa.jpg" alt="Foto de Isabela">
                 </div>
-                <div class="card" data-category="web">
-                    Inserir imagem aqui
-                    <h3>Aplicativo Delivery Fácil</h3>
-                    <p>Criação de aplicativo mobile para plataforma de delivery de comida, com funcionalidades para restaurantes e clientes.</p>
-                    <a href="https://meuprojeto2.com" target="_blank">Ver projeto</a>
-                </div>
-                <div class="card" data-category="mobile">
-                    Inserir imagem aqui
-                    <h3>Interface para App de Banco</h3>
-                    <p>Design de interface intuitiva e moderna para aplicativo mobile de banco, com foco na segurança e praticidade.</p>
-                    <a href="https://behance.net/meuprojeto3" target="_blank">Ver projeto</a>
-                </div>
-                <div class="card" data-category="mobile">
-                    Inserir imagem aqui
-                    <h3>UI/UX para Agendamento Online</h3>
-                    <p>Desenvolvimento de interface e experiência do usuário para sistema de agendamento online, com foco na otimização do fluxo de agendamento.</p>
-                    <a href="https://dribbble.com/meuprojeto4" target="_blank">Ver projeto</a>
+                <div class="inicio-direita">
+                    <a href="https://api.whatsapp.com/send/?phone=5544984280993" class="inicio-botao-contato">
+                        <img src="assets/icons/whatsapp-logo.svg" alt="WhatsApp">
+                        <span>Vamos conversar</span>
+                    </a> 
                 </div>
             </div>
-
-            <div class="see-more-projects">
-                <button class="see-more-button">Ver mais projetos</button>
+        </section>
+        <section id="sobre-mim" class="secao-sobre-mim">
+            <div class="container-sobre-mim">
+                <img class="imagem-perfil" src="assets/fotoisa.jpg" alt="Foto de Isabela Oliveira">
+                <div class="descricao-sobre-mim">
+                    <div class="tag-secao caixa-roxa">Sobre Mim</div>
+                    <h2 class="nome-perfil">Isabela Oliveira</h2>
+                    <p class="introducao-perfil">Meu nome é Isabela e desenvolvo soluções para a web.</p>
+                    <ul class="detalhes-perfil">
+                        <li>‍ +4 anos desenvolvendo aplicações web.</li>
+                        <li>‍ +2 anos como professora de tecnologia, ajudando novos talentos a entrarem no mundo da programação.</li>
+                        <li> Graduada em Sistemas de Informação e Cursando Licenciatura em Computação.</li>
+                        <li> Interesses em desenvolvimento Full Stack, educação tecnológica e UX/UI Design.</li>
+                        <li> Buscando evoluir um pouco mais a cada dia!</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="carreira">
-        <div class="container">
-            <div class="tag-section">Carreira</div>
-            <h1>Minha Trajetória</h1>
+        </section>
+        <section id="portfolio" class="secao-portfolio">
+            <div class="tag-secao">Portfólio</div>
     
-            <div class="columns">
-                <div class="column">
-                    <h2>Área Profissional</h2>
-                    <h3>2016 - Atualmente</h3>
-                    <div class="cards">
-                        <article class="card" data-status="atual">
-                            <h4>Professora | SEED</h4>
-                            <p>Professora do Curso técnico de desenvolvimento de sistemasMinistrei as disciplinas de Programação Mobile, Banco de Dados, 
-                                Pensamento Computacional, Programação Front-end e Back-end, Lógica Computacional e Robótica, preparando os alunos para o 
-                                mercado de tecnologia e incentivando o desenvolvimento de habilidades práticas e teóricas.</p>
-                            <time>Jul 2023 <span>- Atualmente</span>
-                             <span class="pulsing-dot"></span>
-                            </time>
-                        </article>
-                        <article class="card">
-                            <h4>Tutora | UNIPAR</h4>
-                            <p>Atuei como tutora nos cursos de Análise e Desenvolvimento de Sistemas e Ciência de Dados, esclarecendo dúvidas 
-                                sobre conteúdo e o Ambiente Virtual de Aprendizagem (AVA). 
-                                Forneci informações complementares, incentivei discussões em fóruns e acompanhei individualmente os alunos. Também corrigi avaliações, gerenciei postagens e trabalhei 
-                                junto aos coordenadores para resolver questões acadêmicas.
-
-                            </p>
-                            <time>Mai 2022 <span>- Fev 2024</span></time>
-                        </article>
-                        <article class="card">
-                            <h4>Suporte técnico | Mhnet Telecom</h4>
-                            <p>Desempenhei um papel chave na manutenção de redes de computadores robustas e na prestação de suporte técnico de excelência aos clientes. 
-                                Fui responsável por resolver uma ampla gama de problemas técnicos, enfrentando desafios de rede e garantindo a operação 
-                                contínua e eficiente das infraestruturas de TI.</p>
-                            <time>Jun 2020 <span>- Abr 2022</span></time>
-                        </article>
-                        <article class="card">
-                            <h4>Hospital Cemil | Auxiliar de T.I</h4>
-                            <p>Atuei no suporte técnico, realizando manutenções essenciais em sistemas, redes e equipamentos de TI, 
-                            garantindo o funcionamento contínuo e eficiente da infraestrutura tecnológica do hospital.</p>
-                            <time>Jun 2019 <span>- Jan 2020</span></time>
-                        </article>
-                        <article class="card">
-                            <h4>Centro da Juventude | Professora de Informática</h4>
-                            <p>Ministrei aulas de informática e robótica para crianças e adolescentes,
-                            com foco no desenvolvimento de habilidades digitais e pensamento lógico.</p>
-                            <time>Jan 2022 <span>- Atualmente</span></time>
-                            <div class="tecnologias">
-                                <span>Arduino</span>
-                              </div>
-                        </article>
+            <div class="cabecalho">
+                <h1>Trabalhos e Projetos</h1>
+    
+                <div class="botoes">
+                    <button class="botao-selecao ativo" data-categoria="web">
+                        <img src="assets/code-icon.svg" alt="Web" /> Web
+                    </button>
+                    <button class="botao-selecao" data-categoria="design">
+                        <img src="assets/design-icon.svg" alt="Design" /> Design
+                    </button>
+                </div>
+            </div>
+    
+            <div class="cartoes projetos-web">
+                <div class="cartao-trabalho" onclick="window.open('URL_DO_PROJETO')">
+                    <div class="conteudo">
+                        <div class="informacao">
+                            <h5>Título do Projeto Web</h5>
+                            <p>Descrição do projeto web.</p>
+                        </div>
+                        <div class="tags-e-banner">
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <img src="assets/banner-web.jpg" alt="Banner do Projeto Web" class="banner-projeto" />
+                        </div>
                     </div>
                 </div>
-    
-                <div class="column">
-                    <h2>Área Acadêmica</h2>
-                    <h3>2017 - Atualmente</h3>
-                    <div class="cards">
-                        <article class="card" data-status="estudando">
-                            <h4>Bolsista Capes | Talento Tech</h4>
-                            <p>Bolsista do programa Talento Tech Paraná, cursando pela UEPG. Atuando no aprendizado contínuo de disciplinas tecnológicas, 
-                            desenvolvimento de projetos  colaborando com empresas para criar soluções inovadoras e atender às necessidades do mercado.</p>
-                            </p>
-                            <time>Jan 2017 <span>- Dez 2020</span>
-                            <span class="pulsing-dot"></span>
-                            </time>
-                        </article>
-                        <article class="card" data-status="estudando">
-                            <h4>Superior | UEL - Licenciatura em Computação</h4>
-                            <p>Cursando Licenciatura em Computação na Universidade Estadual de Londrina (UEL), com foco no desenvolvimento de competências para
-                             ensino de tecnologias e na formação de habilidades para atuar na educação em TI.</p>
-                            <time>Set 2022 <span>- Dez 2022</span></time>
-                        </article>
-                        <article class="card">
-                            <h4>Pós Graduação | Computação Forense e Perícia Digital</h4>
-                            <p>Pós-Graduação em Computação Forense e Perícia Digital pela Universidade Norte do Paraná (UNOPAR), com ênfase na aplicação de 
-                                técnicas de investigação digitale análise forense, especializando-me na área de segurança da informação e crimes cibernéticos.</p>
-                            <time>Jan 2023 <span>- Out 2023</span></time>
-                        </article>
-                        <article class="card">
-                            <h4>Pós Graduação | Tecnologias de Informática na Educação</h4>
-                            <p>Cursando Pós-Graduação em Tecnologias de Informática na Educação pela Universidade Estadual de Londrina (UEL), com foco na integração de tecnologias 
-                            no ambiente educacional para otimizar o processo de ensino-aprendizagem e aprimorar a experiência dos alunos.</p>
-                            <time>Out 2024 <span>- Out 2025</span></time>
-                        </article>
-                        <article class="card">
-                            <h4>Superior | Sistemas de Informação</h4>
-                            <p>Graduada pela UNIPAR - Universidade Paranaense no curso de Sistemas de Informação, com ênfase em desenvolvimento de sistemas, análise de dados 
-                            e tecnologias da informação.</p>
-                            <time>Jan 2017 <span>- Dez 2020</span></time>
-                        </article>
+                <div class="cartao-trabalho" onclick="window.open('URL_DO_PROJETO')">
+                    <div class="conteudo">
+                        <div class="informacao">
+                            <h5>Título do Projeto Web</h5>
+                            <p>Descrição do projeto web.</p>
+                        </div>
+                        <div class="tags-e-banner">
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <img src="assets/banner-web.jpg" alt="Banner do Projeto Web" class="banner-projeto" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="skills-container">
-            <h1>Tecnologias e Habilidades</h1>
-            <div class="daily-techs">
+    
+            <div class="cartoes projetos-design" style="display: none;">
+                <div class="cartao-trabalho" onclick="window.open('URL_DO_PROJETO')">
+                    <div class="conteudo">
+                        <div class="informacao">
+                            <h5>Título do Projeto Design</h5>
+                            <p>Descrição do projeto design.</p>
+                        </div>
+                        <div class="tags-e-banner">
+                            <div class="tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                            <img src="assets/banner-design.jpg" alt="Banner do Projeto Design" class="banner-projeto" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cartao-trabalho" onclick="window.open('URL_DO_PROJETO')">
+                    <div class="conteudo">
+                        <div class="informacao">
+                            <h5>Título do Projeto Design</h5>
+                            <p>Descrição do projeto design.</p>
+                        </div>
+                        <div class="tags-e-banner">
+                            <div class="tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                            <img src="assets/banner-design.jpg" alt="Banner do Projeto Design" class="banner-projeto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="ver-mais-projetos">
+                <button class="botao-verde botao-web">
+                    <img src="assets/green-github.svg" alt="GitHub" /> Ver mais projetos no GitHub <img src="assets/arrow-right.svg" alt="Seta Direita" />
+                </button>
+                <div class="botoes-design" style="display: none;">
+                    <button class="botao-verde">
+                        <img src="assets/green-figma.svg" alt="Figma" /> Ver mais projetos no Figma <img src="assets/arrow-right.svg" alt="Seta Direita" />
+                    </button>
+                    <button class="botao-verde">
+                        <img src="assets/green-behance.svg" alt="Behance" /> Ver mais projetos no Behance <img src="assets/arrow-right.svg" alt="Seta Direita" />
+                    </button>
+                </div>
+            </div>
+    
+            <div class="projetos-com-videos">
+                </div>
+        </section>
+        </section>
+        <section id="carreira" class="secao-carreira">
+            <div class="container-carreira">
+                <div class="tag-secao">Carreira</div>
+                <h1>Minha Trajetória</h1>
+                <div class="colunas-carreira">
+                    <div class="coluna-carreira">
+                        <h2>Área Profissional</h2>
+                        <h3>2016 - Atualmente</h3>
+                        <div class="cards-carreira">
+                            <article class="cartao-carreira" data-status="atual">
+                                <h4>Professora | SEED</h4>
+                                <p>Professora do Curso técnico de desenvolvimento de sistemas. Ministrei as disciplinas de Programação Mobile, Banco de Dados, Pensamento Computacional, Programação Front-end e Back-end, Lógica Computacional e Robótica, preparando os alunos para o mercado de tecnologia e incentivando o desenvolvimento de habilidades práticas e teóricas.</p>
+                                <time>Jul 2023 <span>- Atualmente</span><span class="ponto-pulsante"></span></time>
+                            </article>
+                            <article class="cartao-carreira">
+                                <h4>Tutora | UNIPAR</h4>
+                                <p>Atuei como tutora nos cursos de Análise e Desenvolvimento de Sistemas e Ciência de Dados, esclarecendo dúvidas sobre conteúdo e o Ambiente Virtual de Aprendizagem (AVA). Forneci informações complementares, incentivei discussões em fóruns e acompanhei individualmente os alunos. Também corrigi avaliações, gerenciei postagens e trabalhei junto aos coordenadores para resolver questões acadêmicas.</p>
+                                <time>Mai 2022 <span>- Fev 2024</span></time>
+                            </article>
+                            <article class="cartao-carreira">
+                                <h4>Suporte técnico | Mhnet Telecom</h4>
+                                <p>Desempenhei um papel chave na manutenção de redes de computadores robustas e na prestação de suporte técnico de excelência aos clientes. Fui responsável por resolver uma ampla gama de problemas técnicos, enfrentando desafios de rede e garantindo a operação contínua e eficiente das infraestruturas de TI.</p>
+                                <time>Jun 2020 <span>- Abr 2022</span></time>
+                            </article>
+                            <article class="cartao-carreira">
+                                <h4>Hospital Cemil | Auxiliar de T.I</h4>
+                                <p>Atuei no suporte técnico, realizando manutenções essenciais em sistemas, redes e equipamentos de TI, garantindo o funcionamento contínuo e eficiente da infraestrutura tecnológica do hospital.</p>
+                                <time>Jun 2019 <span>- Jan 2020</span></time>
+                            </article>
+                            <article class="cartao-carreira">
+                                <h4>Centro da Juventude | Professora de Informática</h4>
+                                <p>Ministrei aulas de informática e robótica para crianças e adolescentes, com foco no desenvolvimento de habilidades digitais e pensamento lógico.</p>
+                                <time>Jan 2022 <span>- Atualmente</span></time>
+                                <div class="tecnologias-cartao">
+                                    <span>Arduino</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="coluna-carreira">
+                        <h2>Área Acadêmica</h2>
+                        <h3>2017 - Atualmente</h3>
+                        <div class="cards-carreira">
+                            <article class="cartao-carreira" data-status="estudando">
+                                <h4>Bolsista Capes | Talento Tech</h4>
+                                <p>Bolsista do programa Talento Tech Paraná, cursando pela UEPG. Atuando no aprendizado contínuo de disciplinas tecnológicas, desenvolvimento de projetos  colaborando com empresas para criar soluções inovadoras e atender às necessidades do mercado.</p>
+                                <time>Jan 2017 <span>- Dez 2020</span><span class="ponto-pulsante"></span></time>
+                            </article>
+                            <article class="cartao-carreira" data-status="estudando">
+                                <h4>Superior | UEL - Licenciatura em Computação</h4>
+                                <p>Cursando Licenciatura em Computação na Universidade Estadual de Londrina (UEL), com foco no desenvolvimento de competências para ensino de tecnologias e na formação de habilidades para atuar na educação em TI.</p>
+                                <time>Set 2022 <span>- Dez 2022</span></time>
+                            </article>
+                            <article class="cartao-carreira">
+                                <h4>Pós Graduação | Computação Forense e Perícia Digital</h4>
+                                <p>UNOPAR - Universidade Norte do Paraná.</p>
+                                <time>Jan 2023 <span>- Out 2023</span></time>
+                            </article>
+                            <article class="cartao-carreira">
+                                <h4>Superior | UEL - Licenciatura em Computação</h4>
+                                <p>Graduada pela UEL Universidade Estadual de Londrina.</p>
+                                <time>Set 2022 <span>- Dez 2022</span></time>
+                            </article>
+                            <article class="cartao-carreira">
+                                <h4>Superior | Sistemas de Informação</h4>
+                                <p>Graduada pela UNIPAR Sistemas de Informação</p>
+                                <time>Jan 2017 <span>- Dez 2020</span></time>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="skills-container">
+                <h2>Tecnologias e habilidades</h2>
                 <h3>Techs que uso no dia a dia</h3>
-                <div class="skills-list">
+                <div class="techs">
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/python-icon.svg" alt="Python" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">Python</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/javascript-icon.svg" alt="JavaScript" class="skill-icon" width="32">
-                        </div>
+                        <img src="assets/icons/javascript-icon.svg" alt="JavaScript" />
                         <span class="skill-name">JavaScript</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/git-icon.svg" alt="Git" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">Git</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/html-icon.svg" alt="HTML" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">HTML</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/vue-icon.svg" alt="Vue.js" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">Vue.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/typescript-icon.svg" alt="TypeScript" class="skill-icon" width="32">
-                        </div>
+                        <img src="assets/icons/typescript-icon.svg" alt="TypeScript" />
                         <span class="skill-name">TypeScript</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/tailwind-icon.svg" alt="Tailwind CSS" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">Tailwind CSS</span>
+                        <img src="assets/icons/git-icon.svg" alt="Git" />
+                        <span class="skill-name">Git</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/sass-icon.svg" alt="Sass" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">Sass</span>
+                        <img src="assets/icons/github-icon.svg" alt="GitHub" />
+                        <span class="skill-name">GitHub</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/nodejs-icon.svg" alt="Node.js" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">Node.js</span>
+                        <img src="assets/icons/html-icon.svg" alt="HTML" />
+                        <span class="skill-name">HTML</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/react-icon.svg" alt="React" class="skill-icon" width="32">
-                        </div>
+                        <img src="assets/icons/css-icon.svg" alt="CSS" />
+                        <span class="skill-name">CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/icons/react-icon.svg" alt="React" />
                         <span class="skill-name">React</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/figma-icon.svg" alt="Figma" class="skill-icon" width="32">
-                        </div>
+                        <img src="assets/icons/nodejs-icon.svg" alt="Node" />
+                        <span class="skill-name">Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/icons/tailwind-icon.svg" alt="Tailwind" />
+                        <span class="skill-name">Tailwind</span>
+                    </div>
+                </div>
+                <h3>Outras techs com que já realizei projetos</h3>
+                <div class="techs">
+                    <div class="skill-item">
+                        <img src="assets/icons/figma-icon.svg" alt="Figma" />
                         <span class="skill-name">Figma</span>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-box">
-                            <img src="assets/icons/css-icon.svg" alt="CSS" class="skill-icon" width="32">
-                        </div>
-                        <span class="skill-name">CSS</span>
+                        <img src="assets/icons/python-icon.svg" alt="Python" />
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="assets/icons/mysql-icon.svg" alt="MySQL" />
+                        <span class="skill-name">My SQL</span>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="other-techs">
-            <h3>Outras techs com que já realizei projetos</h3>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <div class="skill-box">
-                        <img src="assets/icons/figma-icon.svg" alt="Figma" class="skill-icon" width="32">
-                    </div>
-                    <span class="skill-name">Figma</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-box">
-                        <img src="assets/icons/postgres-icon.svg" alt="PostgreSQL" class="skill-icon" width="32">
-                    </div>
-                    <span class="skill-name">PostgreSQL</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-box">
-                        <img src="assets/icons/python-icon.svg" alt="Python" class="skill-icon" width="32">
-                    </div>
-                    <span class="skill-name">Python</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-box">
-                        <img src="assets/icons/mysql-icon.svg" alt="MySQL" class="skill-icon" width="32">
-                    </div>
-                    <span class="skill-name">MySQL</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-    
-        </div>
-    </section>
-    <section id="contatos">
-        <div class="container-contato">
-            <div class="cabecalho-contato">
-                <span class="emoji-contato"></span>
+        </section>
+        <section id="contacts">
+            <div class="tag-and-title">
+                <h2>Entre em Contato</h2>
                 <h1>Vamos conversar</h1>
             </div>
-            <div class="info-contato">
-                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" class="botao-whatsapp">
-                    <img src="assets/icons/whatsapp-logo.svg" alt="Logo do WhatsApp" class="logo-whatsapp">
-                    Vamos conversar
+            <div class="wpp-and-email">
+                <a href="https://api.whatsapp.com/send/?phone=5544984280993" class="inicio-botao-contato" style="text-decoration: none;">
+                    <img src="assets/icons/whatsapp-logo.svg" alt="WhatsApp">
+                    <span>Vamos conversar</span>
                 </a>
-                <div class="info-email">
-                    <img src="assets/icons/paper-plane.svg" alt="Ícone de Email" class="icone-email">
+                <div class="email">
+                    <img src="assets/icons/paper-plane.svg" alt="Email" class="email-icon" />
                     <h4>E-mail:</h4>
-                    <p id="email-para-copiar">isabela676@gmail.com</p>
+                    <div class="email-and-copy">
+                        <h5 id="emailToCopy">isabela676@gmail.com</h5>
+                        <img src="assets/icons/copy.svg" alt="Copy" class="copy-icon" onclick="copyToClipboard()" />
+                    </div>
+                    <h4 id="copySuccess" style="display: none;">✅ Texto copiado para a área de transferência</h4>
                 </div>
             </div>
-            <a href="#home" class="voltar-ao-topo">Voltar ao topo <img src="assets/icons/arrow-up.svg" alt="Ícone de Seta para Cima" class="icone-seta-cima"></a>
-        </div>
-    </section>
+            <h3 onclick="scrollToTop()">Voltar ao topo <img src="assets/icons/arrow-up.svg" alt="Arrow Up" /></h3>
+        </section>
+        <footer class="container">
+            <h1>Copyright © Isabela Oliveira · 2025</h1>
+            <div class="social-medias">
+                <img src="assets/linkedin-white-circle.svg" alt="LinkedIn" onclick="window.open('https://www.linkedin.com/in/seu-perfil-linkedin/')">
+                <img src="assets/github-white-circle.svg" alt="GitHub" onclick="window.open('https://github.com/seu-perfil-github')">
+                <img src="assets/icons/figma-white-circle.svg" alt="Figma" onclick="window.open('https://www.figma.com/@seu-perfil-figma')">
+            </div>
+        </footer>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
-
-
-<footer>
-    <div class="rodape-container">
-        <h1>Copyright © Isabela Oliveira 2025</h1>
-        <div class="social-medias">
-            <a href="https://www.linkedin.com/in/seu-perfil-linkedin/" target="_blank">
-                <img src="assets/icons/linkedin-white-circle.svg" alt="LinkedIn" class="icone-linkedin">
-            </a>
-            <a href="https://github.com/seu-perfil-github" target="_blank">
-                <img src="assets/icons/github-white-circle.svg" alt="GitHub" class="icone-github">
-            </a>
-        </div>
-    </div>
-</footer>
