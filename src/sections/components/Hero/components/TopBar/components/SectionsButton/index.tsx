@@ -101,18 +101,16 @@ const SectionsButton = () => {
 
       <div className="lang">
         <button
-          id="pt"
-          className="language"
+          className={`language ${language === "pt" ? "active" : ""}`}
           onClick={() => setLanguage("pt")}
         >
-          PT <img src={brazilFlag} alt="" />
+          PT <img src={brazilFlag} alt="Bandeira do Brasil" />
         </button>
         <button
-          id="en"
-          className="language"
+          className={`language ${language === "en" ? "active" : ""}`}
           onClick={() => setLanguage("en")}
         >
-          EN <img src={usaFlag} alt="" />
+          EN <img src={usaFlag} alt="Bandeira dos EUA" />
         </button>
       </div>
     </Container>

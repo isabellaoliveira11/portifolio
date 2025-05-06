@@ -21,7 +21,7 @@ export const Container = styled.div`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: rgba(123, 74, 226, 0.1);
+    background: rgba(74, 0, 235, 0.1);
     border-radius: 16px;
   }
 

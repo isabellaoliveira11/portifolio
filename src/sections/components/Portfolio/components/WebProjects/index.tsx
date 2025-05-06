@@ -15,7 +15,7 @@ const WebProjects = () => {
         title="TechNoticia"
         description="site-that-brings-together"
         tags={["Online", "Next.js", "React.js", "Typescript"]}
-        bannerUrl="https://user-images.githubusercontent.com/54003876/234693350-e9c7e550-f78b-484e-b67e-b92b02ff5d85.png"
+        bannerUrl="https://i.postimg.cc/cC8xws2n/technoticiacover-2.png"
         redirectUrl="https://technoticia-810safyso-isabelas-projects-bededd19.vercel.app/"
         online
         beta
@@ -25,13 +25,9 @@ const WebProjects = () => {
         description="simbook-description"
         tags={[
           "Em desenvolvimento",
-          "React",
           "Python",
-          "Flask",
-          "PostgreSQL",
-          "AI",
         ]}
-        bannerUrl="https://i.postimg.cc/ZqtCWTsm/simbook-cover.png"
+        bannerUrl="https://i.postimg.cc/8khPpCR2/dashcover.png"
         redirectUrl=""
         online
         beta

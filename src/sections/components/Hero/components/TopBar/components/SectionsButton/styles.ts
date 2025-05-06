@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 interface ContainerProps {
   language: string;
@@ -9,42 +9,64 @@ export const Container = styled.div<ContainerProps>`
 
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinha os itens à esquerda inicialmente */
+  justify-content: center;
 
-  height: 40px;
-  width: 100%;
-  max-width: 1280px;
-  padding: 0 24px;
-  margin: 0 auto;
+  gap: 32px;
 
   .sections {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 24px;
-    flex-grow: 1; /* Faz a seção ocupar o máximo de espaço possível, empurrando os outros para o final */
 
     button {
+      position: relative;
       font-family: "Raleway", sans-serif;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 16px;
+      background: none;
+      border: none;
       color: white;
-      opacity: 50%;
-      border: 0;
-      padding: 0;
+      opacity: 0.5;
+      padding: 8px 0;
+      cursor: pointer;
+
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s ease-in-out;
 
-      :hover {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
         color: var(--PURPLE);
+        opacity: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(90deg, #6366f1, #a855f7);
+        border-radius: 4px;
+
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
       }
 
       &.active {
-        color: var(--PURPLE);
-        opacity: 100%;
-        font-weight: bold;
-        text-decoration: underline;
+        opacity: 1;
+        background: linear-gradient(90deg, #6366f1, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &.active::after {
+        transform: scaleX(1);
       }
     }
   }
@@ -52,50 +74,43 @@ export const Container = styled.div<ContainerProps>`
   .lang {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-left: auto; /* Empurra a seção de idiomas para a direita */
+    justify-content: center;
+    gap: 24px;
 
     button.language {
       transition: all 0.2s ease-in-out;
+
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+
       padding: 0;
+      outline: none;
       border: none;
       width: 56px;
-      font-family: "Raleway", sans-serif;
+
+      font-family: "Raleway";
+      font-style: normal;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 16px;
+
       color: #ffffff;
-      opacity: 60%;
+      opacity: 0.6;
 
       img {
         width: 24px;
         height: 24px;
-        margin-left: 8px; /* Adiciona um espaço entre o texto e a imagem */
       }
 
-      :hover {
+      &:hover {
         color: var(--PURPLE);
+        opacity: 1;
       }
-    }
 
-    #pt {
-      ${(props) =>
-        props?.language === "pt" &&
-        css`
-          color: var(--PURPLE);
-          opacity: 100%;
-        `}
-    }
-
-    #en {
-      ${(props) =>
-        props?.language === "en" &&
-        css`
-          color: var(--PURPLE);
-          opacity: 100%;
-        `}
+      &.active {
+        color: var(--PURPLE);
+        opacity: 1;
+      }
     }
   }
 `;
