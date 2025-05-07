@@ -16,23 +16,26 @@ export const Container = styled.div`
   .description {
     width: 926px;
 
-    h1 {
-      font-family: "Raleway";
-      font-style: normal;
-      font-weight: 800;
-      font-size: 48px;
-      line-height: 56px;
+  h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 56px;
 
-      color: #ffffff;
-    }
+    background: linear-gradient(to right,rgb(162, 0, 255),rgb(214, 46, 122));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
 
     p {
-      font-family: "Raleway";
+      font-family: "Raleway", sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 40px;
-
       color: #ffffff;
       opacity: 50%;
     }
@@ -66,24 +69,13 @@ export const Container = styled.div`
       width: 100%;
       margin-top: 32px;
 
-      h1 {
-        font-family: "Raleway";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 28px;
-
-        color: #ffffff;
-      }
-
       p {
         margin: 32px 0 0 0;
-        font-family: "Raleway";
+        font-family: "Raleway", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 25px;
-        /* or 179% */
       }
     }
   }

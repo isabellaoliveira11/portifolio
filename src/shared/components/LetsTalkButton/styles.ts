@@ -31,7 +31,7 @@ export const Container = styled.button`
     display: flex;
     align-items: center;
 
-    color: rgba(123, 74, 226, 0.5);
+    color: #a855f7;
     white-space: nowrap;
   }
 `;

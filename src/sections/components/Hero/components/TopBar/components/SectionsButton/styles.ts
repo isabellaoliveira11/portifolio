@@ -37,14 +37,14 @@ export const Container = styled.div<ContainerProps>`
       transition: all 0.2s ease-in-out;
 
       :hover {
-        color: var(--PURPLE);
+        color:rgb(214, 90, 220);
       }
 
       &.active {
-        color: var(--PURPLE);
+        color: linear-gradient(90deg,rgb(169, 55, 235),rgb(255, 0, 145));;
         opacity: 100%;
         font-weight: bold;
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }

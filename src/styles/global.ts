@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  --PURPLE: #7b4ae2;
+  --PURPLE: #a855f7;
   --DARK: #0C0F17;
 
   background-color: var(--DARK);
