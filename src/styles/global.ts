@@ -14,6 +14,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+
+
+  
   /* width */
   ::-webkit-scrollbar {
     width: 8px;

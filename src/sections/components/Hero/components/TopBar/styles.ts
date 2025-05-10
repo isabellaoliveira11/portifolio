@@ -2,33 +2,44 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   position: fixed;
-  top: 0;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  z-index: 100;
-  padding: 16px 0;
-
-  backdrop-filter: blur(12px);
-  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  padding: 0;
+  z-index: 1000;
 
   display: flex;
   justify-content: center;
-  align-items: center;
 
   .nav-wrapper {
-    width: 100%;
-    max-width: 1100px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-end; /* alinha tudo à direita */
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1280px;
+    padding: 6px 20px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 12px;
+
+    img {
+      width: 36px;
+      margin-right: 24px;
+    }
   }
 
   .sections {
     display: flex;
-    gap: 40px;
+    gap: 24px;
 
     button {
       font-family: "Raleway", sans-serif;
-      font-size: 16px;
+      font-size: 13px;
       font-weight: 600;
       color: #e5e5e5;
       background: none;
@@ -70,13 +81,12 @@ export const Container = styled.header`
 
   .lang {
     display: flex;
-    gap: 12px;
-    margin-left: 32px;
+    gap: 8px;
 
     .language {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       color: #ccc;
       background: none;
       border: none;
@@ -84,8 +94,8 @@ export const Container = styled.header`
       font-weight: 500;
 
       img {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
       }
 
       &:hover {
@@ -94,13 +104,33 @@ export const Container = styled.header`
     }
   }
 
-  @media (max-width: 768px) {
+  /* Responsividade */
+  @media (max-width: 1150px) {
+    .nav-wrapper {
+      zoom: 90%;
+    }
+  }
+
+  @media (max-width: 1045px) {
+    .nav-wrapper {
+      zoom: 80%;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .nav-wrapper {
+      zoom: 100%;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+    }
+
     .sections {
-      gap: 20px;
+      gap: 16px;
     }
 
     .lang {
-      margin-left: 16px;
+      margin-left: 0;
     }
   }
 `;

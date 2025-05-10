@@ -13,17 +13,21 @@ export const Container = styled.div`
     justify-content: flex-start;
     flex-direction: column;
 
-    .name-and-title {
-      h1 {
-        margin: 24px 0;
-        font-family: "Raleway";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 52px;
-        line-height: 61px;
+  .name-and-title {
+  h1 {
+    margin: 24px 0;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 61px;
 
-        color: #ffffff;
-      }
+    background: linear-gradient(to right, #a855f7, #6f63f2); /* degrade roxo */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 
       h6 {
         margin: 0;

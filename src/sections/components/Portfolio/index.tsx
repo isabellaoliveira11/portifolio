@@ -14,9 +14,7 @@ import { GreenButton } from "../../../shared/components/GreenButton";
 import designIcon from "../../../shared/assets/icons/design-icon.svg";
 import codeIcon from "../../../shared/assets/icons/code-icon.svg";
 import greenGithub from "../../../shared/assets/icons/green-github.svg";
-// Importe os ícones do Figma e Behance se você for usá-los aqui
-// import greenFigma from "../../../shared/assets/icons/green-figma.svg";
-// import greenBehance from "../../../shared/assets/icons/green-behance.svg";
+
 
 import { Container } from "./styles";
 
@@ -69,27 +67,8 @@ const Portfolio = () => {
             arrow
           />
         ) : (
-          // Adicione o conteúdo que você quer mostrar para projetos de design aqui
-          // Por exemplo:
-          // <div className="buttons">
-          //   <GreenButton
-          //     icon={greenFigma}
-          //     textId="see-more-projects-on-figma"
-          //     onClick={() =>
-          //       window.open("https://www.figma.com/@hsousadev", "_blank")
-          //     }
-          //     arrow
-          //   />
-          //   <GreenButton
-          //     icon={greenBehance}
-          //     textId="see-more-projects-on-behance"
-          //     onClick={() =>
-          //       window.open("https://www.behance.net/hsousadev", "_blank")
-          //     }
-          //     arrow
-          //   />
-          // </div>
-          <></> // Ou null se você não quiser mostrar nada
+         
+          <></> //  <GreenButton
         )}
       </div>
     </Container>

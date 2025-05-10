@@ -16,7 +16,6 @@ const SectionsButton = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   const sections = [
-    "status",
     "hero",
     "aboutMe",
     "portfolio",
@@ -35,7 +34,8 @@ const SectionsButton = () => {
         });
       },
       {
-        threshold: 0.6,
+        threshold: 0.3,
+        rootMargin: "-120px 0px 0px 0px",
       }
     );
 
@@ -55,12 +55,11 @@ const SectionsButton = () => {
   return (
     <Container language={language}>
       <div className="sections">
-        <button
-          onClick={() => smoothScroll("status")}
-          className={activeSection === "status" ? "active" : ""}
-        >
-          <Pulse /> Status
+        {/* ✅ Status como botão-badge clicável */}
+        <button onClick={() => smoothScroll("career")} className="status-badge">
+          <Pulse /> <span>Status</span>
         </button>
+
         <button
           onClick={() => smoothScroll("hero")}
           className={activeSection === "hero" ? "active" : ""}

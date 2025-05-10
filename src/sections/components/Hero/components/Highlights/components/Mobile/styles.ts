@@ -115,18 +115,18 @@ export const Container = styled.div<ContainerProps>`
     flex-direction: column;
 
     .name-and-title {
-      h1 {
-        margin: 16px 0 4px 0;
 
-        font-family: "Raleway";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 56px;
-
-        color: #ffffff;
-      }
-
+    h1 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 56px;
+      background: linear-gradient(to right, #a855f7, #6f63f2); /* degrade roxo */
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
       h6 {
         margin: 0;
         white-space: nowrap;

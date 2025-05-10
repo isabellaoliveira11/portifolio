@@ -29,7 +29,7 @@ const Desktop = () => {
             Isabela <br /> Oliveira
           </h1>
 
-          <h6> Full-Stack developer · UI designer</h6>
+          <h6> Full-Stack developer </h6>
         </div>
 
         <div className="social-medias">
@@ -55,7 +55,7 @@ const Desktop = () => {
         <a
           href={isLanguagePt ? ResumePT : ResumeEN}
           download={
-            isLanguagePt
+            isLanguagePt  
               ? "curriculo-isabela-abr-2025.pdf"
               : "resume-isabela-abr-2025.pdf"
           }
