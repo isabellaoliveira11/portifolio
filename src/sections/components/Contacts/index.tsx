@@ -20,7 +20,7 @@ const Contacts = () => {
   const [copySuccess, setCopySuccess] = useState(false);
 
   function copyToClipboard() {
-    copy("isabela676@gmail.com");
+    copy("isabelaoliveiradev@gmail.com");
     setCopySuccess(true);
 
     setTimeout(() => {
@@ -44,7 +44,7 @@ const Contacts = () => {
           <h4>E-mail:</h4>
           {!isMobile ? (
             <>
-              <h5 id="emailToCopy">isabela676@gmail.com</h5>
+              <h5 id="emailToCopy">isabelaoliveiradev@gmail.com</h5>
               <CopySimple
                 onClick={copyToClipboard}
                 weight="thin"
@@ -55,7 +55,8 @@ const Contacts = () => {
           ) : (
             <>
               <div className="email-and-copy">
-                <h5 id="emailToCopy">isabela676@gmail.com</h5>
+                <h5 id="emailToCopy">isabelaoliveiradev@gmail.com
+                </h5>
                 <CopySimple
                   onClick={copyToClipboard}
                   weight="thin"

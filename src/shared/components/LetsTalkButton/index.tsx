@@ -10,7 +10,7 @@ const LetsTalkButton = () => {
         window.open("https://api.whatsapp.com/send/?phone=5544984280993")
       }
     >
-      <WhatsappLogo size={24} weight="thin" color="rgba(123, 74, 226, 0.5)" />
+      <WhatsappLogo size={24} weight="thin" color="rgb(168, 85, 247)" />
       <h1>
         <FormattedMessage id="lets-talk" />
       </h1>

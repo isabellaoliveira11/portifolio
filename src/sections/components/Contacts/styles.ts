@@ -18,16 +18,17 @@ export const Container = styled.div`
 
     gap: 24px;
 
+
     h1 {
-      font-family: "Raleway";
-      font-style: normal;
+      font-family: "Raleway", sans-serif;
       font-weight: 800;
       font-size: 48px;
       line-height: 56px;
-      text-align: center;
-      margin: 0;
-
-      color: #ffffff;
+      background: linear-gradient(to right, #a855f7, #6f63f2); /* degrade roxo */
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -61,7 +62,8 @@ export const Container = styled.div`
         line-height: 23px;
         margin: 4px 0 0 0;
 
-        color: #7b4ae2;
+        
+       color:rgb(168, 85, 247);
       }
 
       h5 {

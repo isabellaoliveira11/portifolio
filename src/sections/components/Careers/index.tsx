@@ -83,22 +83,6 @@ const Careers = () => {
                 ]}
               />
 
-              {/* <CardInfo
-                title="front-end-developer-at-coderockr"
-                description="working-on-the-maintenance"
-                startAndEnd="november-2022-december-2022"
-                tags={[
-                  "React JS",
-                  "Javascript",
-                  "CSS",
-                  "Sass",
-                  "JQuery",
-                  "Git",
-                  "Gitlab",
-                  "Github",
-                ]}
-              /> */}
-
               <CardInfo
                 title="support-at-hospital"
                 description="support-of-description"

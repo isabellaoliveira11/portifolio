@@ -116,7 +116,7 @@ export const Container = styled.div<ContainerProps>`
       align-items: center;
       text-align: right;
 
-      color: var(--PURPLE);
+      color: white;
     }
   }
 

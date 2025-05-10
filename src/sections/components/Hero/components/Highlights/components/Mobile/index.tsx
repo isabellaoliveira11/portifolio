@@ -65,7 +65,7 @@ const Mobile = () => {
           <h1>
             Isabela <br /> Oliveira
           </h1>
-          <h6> Full-Stack developer · UI designer </h6>
+          <h6> Full-Stack developer  </h6>
         </div>
 
         <div className="buttons">
@@ -79,7 +79,7 @@ const Mobile = () => {
             target="_blank"
           >
             <FormattedMessage id="download" /> CV{" "}
-            <ArrowLineDown size={24} color="rgba(123, 74, 226, 0.5)" />
+            <ArrowLineDown size={24} color="rgba(123, 74, 226, 0.5)"/>
           </a>
 
           <LetsTalkButton />

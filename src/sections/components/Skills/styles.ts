@@ -10,14 +10,17 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1645px;
 
+
   h1 {
-    font-family: "Raleway";
-    font-style: normal;
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 48px;
-    text-align: center;
-    color: #ffffff;
-    margin: 24px 0 100px 0;
+    line-height: 56px;
+    background: linear-gradient(to right, #a855f7, #6f63f2); /* degrade roxo */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   h3 {

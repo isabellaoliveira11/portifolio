@@ -8,8 +8,8 @@ export const Container = styled.div<ContainerProps>`
   transition: all 0.2s ease-in-out;
 
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start; /* Alinha os itens à esquerda inicialmente */
 
   height: 40px;
   width: 100%;
@@ -17,11 +17,54 @@ export const Container = styled.div<ContainerProps>`
   padding: 0 24px;
   margin: 0 auto;
 
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+
+    > img {
+      width: 38px;
+      margin-right: 24px;
+    }
+  }
+
   .sections {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 24px;
-    flex-grow: 1; /* Faz a seção ocupar o máximo de espaço possível, empurrando os outros para o final */
+    flex: 1; /* centraliza horizontalmente entre logo e lang */
+
+    /* ✅ Estilo do botão badge Status */
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      color: #4ade80;
+      opacity: 100%;
+
+      span {
+        color: #4ade80;
+      }
+
+      &:hover {
+        color: #4ade80;
+        opacity: 1;
+      }
+
+      &::after {
+        display: none !important;
+      }
+    }
 
     button {
       font-family: "Raleway", sans-serif;
@@ -35,16 +78,37 @@ export const Container = styled.div<ContainerProps>`
       align-items: center;
       gap: 8px;
       transition: all 0.2s ease-in-out;
+      position: relative;
 
       :hover {
-        color: var(--PURPLE);
+        color: rgb(255, 255, 255);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0%;
+        height: 2px;
+        background: linear-gradient(90deg, #6f63f2, #a855f7);
+        border-radius: 4px;
+        transition: width 0.4s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &.active::after {
+        width: 100%;
       }
 
       &.active {
-        color: var(--PURPLE);
+        color: linear-gradient(90deg, rgb(169, 55, 235), rgb(255, 0, 145));
         opacity: 100%;
         font-weight: bold;
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
@@ -53,7 +117,6 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: auto; /* Empurra a seção de idiomas para a direita */
 
     button.language {
       transition: all 0.2s ease-in-out;
@@ -72,7 +135,7 @@ export const Container = styled.div<ContainerProps>`
       img {
         width: 24px;
         height: 24px;
-        margin-left: 8px; /* Adiciona um espaço entre o texto e a imagem */
+        margin-left: 8px;
       }
 
       :hover {
@@ -82,7 +145,7 @@ export const Container = styled.div<ContainerProps>`
 
     #pt {
       ${(props) =>
-        props?.language === "pt" &&
+        props.language === "pt" &&
         css`
           color: var(--PURPLE);
           opacity: 100%;
@@ -91,7 +154,7 @@ export const Container = styled.div<ContainerProps>`
 
     #en {
       ${(props) =>
-        props?.language === "en" &&
+        props.language === "en" &&
         css`
           color: var(--PURPLE);
           opacity: 100%;

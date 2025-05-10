@@ -1,23 +1,17 @@
 {
   "about-me": "About me",
-  "about-me-emoji": "🧐 About me",
+  "about-me-emoji": "✨ About me",
   "portfolio": "Portfolio",
   "portfolio-emoji": "🔗 Portfolio",
   "career": "Career",
   "career-emoji": "💼 Career",
-  "recommendations": "Recommendations",
-  "recommendations-emoji": "💬 Recommendations",
   "contact": "Contact",
   "contact-emoji": "📬 Contact",
   "download": "Download",
   "lets-talk": "Let's chat on whatsapp",
   "greetings": "👋 Greetings!",
-  "three-years-as-a": "3 years as a",
-  "4-years-as-a": "4 years as a",
-  "seven-years-of": "7 years of",
   "developer": "Developer",
   "work": "work",
-  "dozens-of-projects-and": "Dozens of projects and",
   "experiences": "Experiences",
   "freelance-designer-and": "Freelance designer and",
   "you-can-call-me-isabela": "My name is Isabela and I develop web solutions focused on performance and usability.",
@@ -137,5 +131,5 @@
   "teacher-at-scholl": "Teacher | SEED",
 "fev-2023-actually": "Feb/2023 - Present",
 "working-at-scholl": "Teacher in the Technical Course in Systems Development. Taught subjects such as Mobile Programming, Databases, Computational Thinking, Front-end and Back-end Programming, Computational Logic, and Educational Robotics, preparing students for the tech industry and encouraging the development of both practical and theoretical skills.",
-  "simbook-description": "Full-Stack book management application with users of different roles."
+"localfit-description": "Full-Stack book management application with users of different roles."
 }
