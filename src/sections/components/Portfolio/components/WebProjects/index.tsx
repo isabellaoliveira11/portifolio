@@ -14,9 +14,8 @@ const WebProjects = () => {
       <WorkCard
         title="TechNoticia"
         description="site-that-brings-together"
-        tags={["Online", "Next.
-               js", "React.js", "Typescript"]}
-        bannerUrl=""
+        tags={["Online", "Next.js", "React.js", "Typescript"]}
+        bannerUrl="https://user-images.githubusercontent.com/54003876/234693350-e9c7e550-f78b-484e-b67e-b92b02ff5d85.png"
         redirectUrl="https://technoticia.vercel.app/"
         online
         beta
