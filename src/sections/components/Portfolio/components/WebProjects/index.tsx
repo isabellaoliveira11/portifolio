@@ -21,16 +21,17 @@ const WebProjects = () => {
         beta
       />
       <WorkCard
-        title="LocalFit"
-        description="localfit-description"
+        title="Vendyx"
+        description="vendyx-description"
         tags={[
-          "Em desenvolvimento",
-          "Python",
-          "Flask",
-          "AI",
+          "Online",
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "PostgreSQL",
         ]}
-        bannerUrl="https://i.postimg.cc/8khPpCR2/dashcover.png"
-        redirectUrl=""
+        bannerUrl="https://i.postimg.cc/SxRDBwDb/dash2-vendyx.png"
+        redirectUrl="https://vendyx.vercel.app/"
         online
         beta
       />
