@@ -16,7 +16,7 @@ const WebProjects = () => {
         description="site-that-brings-together"
         tags={["Online", "Next.js", "React.js", "Typescript"]}
         bannerUrl="https://i.postimg.cc/cC8xws2n/technoticiacover.png"
-        redirectUrl="https://technoticia-810safyso-isabelas-projects-bededd19.vercel.app/"
+        redirectUrl="https://technoticia.vercel.app/"
         online
         beta
       />
