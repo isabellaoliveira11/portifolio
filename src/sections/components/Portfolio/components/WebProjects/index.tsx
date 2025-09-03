@@ -35,6 +35,19 @@ const WebProjects = () => {
         online
         beta
       />
+            <WorkCard
+        title="FitIA"
+        description="fitia-description"
+        tags={[
+          "Online",
+          "TailwindCSS",
+          "JavaScript",
+        ]}
+        bannerUrl="https://i.postimg.cc/HL1GCNm3/FITIADASH.png"
+        redirectUrl="https://fitia-theta.vercel.app/login.html"
+        online
+        beta
+      />
     </ProjectsContainer>
   );
 };
